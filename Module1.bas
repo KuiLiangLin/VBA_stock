@@ -1,5 +1,5 @@
 Attribute VB_Name = "Module1"
-Sub history_quart()
+Sub b_history_quart()
        
 Dim i%, r%, j%, k%, m%, x%, y%, w%
 Dim arr1, arr2
@@ -7,7 +7,7 @@ Dim arr1, arr2
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 w = 3     'stored data always starts at collect_Q collumn C and D
 ''''''''''''''''''''''''''''''''''''''''''''
-For y = 9 To 10 Step 1 '34 ' sheet eps10802 TO sheet eps10801
+For y = 34 To 9 Step -1 '34 ' sheet eps10802 TO sheet eps10801
 ''''''''''''''''''''''''''''''''''''''''''''
 
 
@@ -29,14 +29,17 @@ For y = 9 To 10 Step 1 '34 ' sheet eps10802 TO sheet eps10801
         arr1 = Sheets(y).Range(Sheets(y).Cells(i, 1), Sheets(y).Cells(i, 35))
             
         For j = 1 To 35 Step 1
-            If arr1(1, j) Like "*利息淨收益*" Then
+            If arr1(1, j) = "利息淨收益" Then
             Exit For
             End If
-            If arr1(1, j) Like "*收益*" Then
+            If arr1(1, j) = "收益" Then
             Exit For
             End If
-            If arr1(1, j) Like "*營業收入*" Then
-           Exit For
+            If arr1(1, j) = "營業收入" Then
+            Exit For
+            End If
+            If arr1(1, j) = "收入" Then
+            Exit For
             End If
         Next
         

@@ -1,6 +1,6 @@
 Attribute VB_Name = "Module4"
-Sub recent_4_month()
-Attribute recent_4_month.VB_ProcData.VB_Invoke_Func = " \n14"
+Sub a_recent_4_month()
+Attribute a_recent_4_month.VB_ProcData.VB_Invoke_Func = " \n14"
         
 Dim i%, r%, x%, y%, w%
 Dim arr1, arr2
@@ -9,7 +9,7 @@ Dim arr1, arr2
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 w = 3    'stored data always starts at collect_M collumn C and D
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''
-For y = 4 To 5 Step 1   'sheet 4 TO sheet 7
+For y = 8 To 4 Step -1   'sheet 4 TO sheet 7
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 
