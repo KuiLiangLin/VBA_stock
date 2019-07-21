@@ -9,7 +9,7 @@ Dim arr1, arr2
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 w = 3    'stored data always starts at collect_M collumn C and D
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''
-For y = 8 To 4 Step -1   'sheet 4 TO sheet 7
+For y = 7 To 4 Step -1   'sheet 4 TO sheet 7
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 
@@ -19,7 +19,7 @@ For y = 8 To 4 Step -1   'sheet 4 TO sheet 7
     For x = 3 To 947
     
         For i = 1 To 30
-            If arr1(1, i) = "上月比較" Then
+            If arr1(1, i) = "當月營收" Then
             Exit For
             End If
         Next
@@ -34,10 +34,10 @@ For y = 8 To 4 Step -1   'sheet 4 TO sheet 7
         
         
         Sheets("collect_M").Cells(1, w) = Sheets(y).Name & Sheets(y).Cells(12, i)
-        Sheets("collect_M").Cells(1, w + 1) = Sheets(y).Name & Sheets(y).Cells(12, i + 1)
+        Sheets("collect_M").Cells(1, w + 1) = Sheets(y).Name & Sheets(y).Cells(12, i + 2)
         
         Sheets("collect_M").Cells(x, w) = Sheets(y).Cells(r, i)
-        Sheets("collect_M").Cells(x, w + 1) = Sheets(y).Cells(r, i + 1)
+        Sheets("collect_M").Cells(x, w + 1) = Sheets(y).Cells(r, i + 2)
         
     Next
     w = w + 2
